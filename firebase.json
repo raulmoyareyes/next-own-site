@@ -1,0 +1,31 @@
+{
+  "functions": {
+    "source": "server"
+  },
+  "hosting": {
+    "site": "nextjs-own-site",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "next"
+      }
+    ],
+    "headers": [
+      {
+        "source" : "**/*.@(jpg|jpeg|gif|png|css|js|woff2|woff)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=604800"
+          }
+        ]
+      }
+    ]
+  }
+}
