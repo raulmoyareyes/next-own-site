@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev ./src",
-    "build": "next build ./src",
+    "build": "sh ./scripts/build.sh",
     "start": "next start ./src",
     "deploy": "sh ./scripts/deploy.sh"
   },
@@ -12,5 +12,8 @@
     "next": "9.0.3",
     "react": "16.9.0",
     "react-dom": "16.9.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^7.2.2"
   }
 }
